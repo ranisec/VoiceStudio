@@ -1,8 +1,22 @@
 <!-- ranisec fork notice -->
-> ## 포크 안내
-> 이 저장소는 [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio)의 **ranisec 포크**입니다. 원본 라이선스(AGPL-3.0)를 그대로 유지합니다.
-> 이 포크에서 추가한 것: `stt.py` — faster-whisper 기반 로컬 CPU 한국어 음성→텍스트 스크립트(오프라인 기본).
-> 원본 코드는 수정하지 않았으며, 자세한 내용은 [FORK_NOTES.md](FORK_NOTES.md)를 참고하세요. 업스트림에 PR은 보내지 않았습니다.
+> [!NOTE]
+> ### 🍴 포크 안내 (ranisec fork)
+> 이 저장소는 **[debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio)** 의 포크입니다. 원본 코드는 그대로이며, 스크립트 1개만 추가했습니다.
+>
+> | 추가 파일 | 용도 |
+> |---|---|
+> | [`stt.py`](stt.py) | faster-whisper(VoiceStudio 내부 ASR 엔진)로 오디오·영상 파일을 **CPU에서 한국어 전사**하는 최소 스크립트. GUI·서버 없이 바로 실행 |
+>
+> **왜?** 데스크톱 앱을 띄우지 않고 터미널에서 한국어 녹음·영상을 오프라인으로 받아 적기 위해서입니다.
+>
+> ```bash
+> pip install faster-whisper
+> HF_HUB_OFFLINE=0 python stt.py meeting.m4a small   # 처음 한 번: 모델 다운로드 허용
+> python stt.py meeting.m4a                          # 이후: 오프라인(기본값)
+> # 출력 예: [0.0-3.2]  안녕하세요 ...
+> ```
+>
+> 라이선스: 원본과 같은 **AGPL-3.0** (변경 없음) · 자세한 내용: [FORK_NOTES.md](FORK_NOTES.md) · 업스트림에 PR을 보내지 않은 개인 포크입니다.
 
 <div align="center">
   <h1><img src="docs/logo.png" alt="" width="36" height="36" /> VoiceStudio</h1>
