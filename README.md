@@ -1,3 +1,9 @@
+<!-- ranisec fork notice -->
+> ## 포크 안내
+> 이 저장소는 [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio)의 **ranisec 포크**입니다. 원본 라이선스(AGPL-3.0)를 그대로 유지합니다.
+> 이 포크에서 추가한 것: `stt.py` — faster-whisper 기반 로컬 CPU 한국어 음성→텍스트 스크립트(오프라인 기본).
+> 원본 코드는 수정하지 않았으며, 자세한 내용은 [FORK_NOTES.md](FORK_NOTES.md)를 참고하세요. 업스트림에 PR은 보내지 않았습니다.
+
 <div align="center">
   <h1><img src="docs/logo.png" alt="" width="36" height="36" /> VoiceStudio</h1>
   <p>
